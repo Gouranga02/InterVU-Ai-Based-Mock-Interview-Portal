@@ -727,5 +727,6 @@ if __name__ == '__main__':
     print(f"   • Groq API: {'✅ CONFIGURED' if GROQ_API_KEY else '❌ NOT CONFIGURED'}")
     print(f"   • Model: {MODEL}")
     print("\n" + "=" * 70 + "\n")
+    port = int(os.environ.get("PORT", 5000))
 
     app.run(debug=True, host='127.0.0.1', port=5000)
