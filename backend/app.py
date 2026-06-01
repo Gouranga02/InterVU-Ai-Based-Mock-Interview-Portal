@@ -716,10 +716,7 @@ if __name__ == '__main__':
     print("\n" + "=" * 70)
     print("🤖 InterVU AI INTERVIEW SYSTEM - PROFESSIONAL EDITION".center(70))
     print("=" * 70)
-    print("🚀 Server running on: http://127.0.0.1:5000".center(70))
-    print("📄 Login page: http://127.0.0.1:5000/".center(70))
-    print("📊 Dashboard: http://127.0.0.1:5000/dashboard.html".center(70))
-    print("🎤 Interview: http://127.0.0.1:5000/interview-home.html".center(70))
+    print("🚀 Server initializing...".center(70))
     print("=" * 70)
     print("\n📊 INTERVIEW CONFIGURATION:")
     print("   • Duration-based questions: 15min→8-12 | 30min→15-20 | 60min→25-35 | 90min→35-45 | 120min→45-55")
@@ -727,6 +724,9 @@ if __name__ == '__main__':
     print(f"   • Groq API: {'✅ CONFIGURED' if GROQ_API_KEY else '❌ NOT CONFIGURED'}")
     print(f"   • Model: {MODEL}")
     print("\n" + "=" * 70 + "\n")
-    port = int(os.environ.get("PORT", 5000))
 
-    app.run(debug=True, host='127.0.0.1', port=5000)
+    # 1. Fetch the port dynamically allocated by Render
+    # 2. Bind host to '0.0.0.0' so it accepts external requests from the web
+    # 3. Disable debug mode in production to ensure stability on Render
+    port = int(os.environ.get("PORT", 5000))
+    app.run(debug=False, host='0.0.0.0', port=port)
