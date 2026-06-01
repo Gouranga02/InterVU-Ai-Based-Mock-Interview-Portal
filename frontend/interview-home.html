@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>Gosmi AI | Face Detection Interview System</title>
+  <title>InterVU AI | Face Detection Interview System</title>
 
   <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
   <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/blazeface"></script>
@@ -431,7 +431,7 @@
 <div class="container">
 
   <div class="header">
-    <h1>🤖 Gosmi AI Interview System</h1>
+    <h1>🤖 InterVU AI Interview System</h1>
     <p>Face Detection • Voice Recognition • AI Evaluation • Smart Insights</p>
   </div>
 
@@ -619,7 +619,7 @@
 <div class="intro-modal" id="introModal">
   <div class="intro-content">
     <div class="intro-avatar">🤖</div>
-    <h2>Hello! I'm Gosmi</h2>
+    <h2>Hello! I'm InterVU</h2>
     <p style="margin:16px 0; line-height:1.6;" id="studentNameMsg">Loading student name...</p>
     <div class="intro-buttons">
       <button class="btn" id="yesBtn" style="background:#28a745;">✅ Yes, Start</button>
@@ -656,7 +656,7 @@
   const { createClient } = supabase;
   const _supabase = createClient(SB_URL, SB_KEY);
 
-  const API_BASE_URL = 'https://gosmi-ai-based-mock-interview-portal.onrender.com';
+  const API_BASE_URL = 'https://InterVU-ai-based-mock-interview-portal.onrender.com';
   const DASHBOARD_URL = 'dashboard.html'; // change if needed
 
   // ── State ─────────────────────────────────────────────────────────────────
@@ -762,7 +762,7 @@
         const msg = document.getElementById('studentNameMsg');
         if (msg) {
           msg.innerHTML =
-            `Hello <strong>${sanitizeHTML(data.full_name)}</strong>, I'm Gosmi, your AI Interviewer.<br>Are you ready to start the interview?`;
+            `Hello <strong>${sanitizeHTML(data.full_name)}</strong>, I'm InterVU, your AI Interviewer.<br>Are you ready to start the interview?`;
         }
       }
     } catch (err) {
@@ -1151,7 +1151,7 @@
     initSpeechRecognition();
     loadFaceModel();
 
-    console.log('🎤 Gosmi AI Interview System Ready!');
+    console.log('🎤 InterVU AI Interview System Ready!');
   });
 
   function setupEventListeners() {
@@ -1669,8 +1669,8 @@
 
         const name = currentStudent?.full_name || sessionStorage.getItem('studentName') || 'Candidate';
         document.getElementById('studentNameMsg').innerHTML =
-          `Hello <strong>${sanitizeHTML(name)}</strong>, I'm Gosmi, your AI Interviewer.<br>Are you ready to start?`;
-        speakText(`Hello ${name}, myself Gosmi, your AI interviewer. Are you ready?`);
+          `Hello <strong>${sanitizeHTML(name)}</strong>, I'm InterVU, your AI Interviewer.<br>Are you ready to start?`;
+        speakText(`Hello ${name}, myself InterVU, your AI interviewer. Are you ready?`);
 
         window.pendingDuration = currentMode === 'duration'
           ? parseInt(document.getElementById('duration').value || '30', 10)
