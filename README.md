@@ -1,1 +1,1 @@
-# Gosmi-Ai-Based-Mock-Interview-Portal
+# InterVU-Ai-Based-Mock-Interview-Portal
