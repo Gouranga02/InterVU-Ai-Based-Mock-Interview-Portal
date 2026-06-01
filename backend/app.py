@@ -714,7 +714,7 @@ def get_interview_stats():
 
 if __name__ == '__main__':
     print("\n" + "=" * 70)
-    print("🤖 GOSMI AI INTERVIEW SYSTEM - PROFESSIONAL EDITION".center(70))
+    print("🤖 InterVU AI INTERVIEW SYSTEM - PROFESSIONAL EDITION".center(70))
     print("=" * 70)
     print("🚀 Server running on: http://127.0.0.1:5000".center(70))
     print("📄 Login page: http://127.0.0.1:5000/".center(70))
